@@ -88,17 +88,17 @@ export function Inbox() {
   const receivedRequests = requests.filter(req => req.requester_id !== user?.id)
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 px-2 sm:px-4 py-4 sm:py-8">
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-800 mb-2">Secret Inbox</h1>
-        <p className="text-gray-600">Your anonymous collaboration requests</p>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Secret Inbox</h1>
+        <p className="text-gray-600 text-sm sm:text-base">Your anonymous collaboration requests</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="flex flex-col md:grid md:grid-cols-2 gap-6 sm:gap-8">
         {/* Received Requests */}
-        <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-purple-100">
-          <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center space-x-2">
-            <MessageCircle className="w-6 h-6 text-purple-600" />
+        <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-purple-100">
+          <h2 className="text-lg sm:text-xl font-bold text-gray-800 mb-3 sm:mb-4 flex items-center space-x-2">
+            <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" />
             <span>Received Requests ({receivedRequests.length})</span>
           </h2>
 
@@ -177,9 +177,9 @@ export function Inbox() {
         </div>
 
         {/* Sent Requests */}
-        <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-purple-100">
-          <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center space-x-2">
-            <User className="w-6 h-6 text-pink-600" />
+        <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-purple-100">
+          <h2 className="text-lg sm:text-xl font-bold text-gray-800 mb-3 sm:mb-4 flex items-center space-x-2">
+            <User className="w-5 h-5 sm:w-6 sm:h-6 text-pink-600" />
             <span>Sent Requests ({sentRequests.length})</span>
           </h2>
 
